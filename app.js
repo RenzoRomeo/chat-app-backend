@@ -3,7 +3,7 @@ exports.__esModule = true;
 var socket_io_1 = require("socket.io");
 var server = new socket_io_1.Server(8000, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://chat-app-next-renzoromeo.vercel.app/',
         methods: ['GET', 'POST']
     }
 });
