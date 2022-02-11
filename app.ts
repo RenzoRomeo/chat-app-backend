@@ -4,9 +4,9 @@ const server = new Server(parseInt(process.env.PORT as string) || 8000, {
   cors: {
     origin: [
       'https://chat-app-next-renzoromeo.vercel.app:*',
-      'chat-app-next-snowy.vercel.app:*',
+      'https://chat-app-next-snowy.vercel.app:*',
     ],
-    allowedHeaders: '*',
+    credentials: true,
     methods: ['GET', 'POST'],
   },
 });
