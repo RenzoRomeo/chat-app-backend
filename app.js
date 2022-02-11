@@ -3,11 +3,7 @@ exports.__esModule = true;
 var socket_io_1 = require("socket.io");
 var server = new socket_io_1.Server(parseInt(process.env.PORT) || 8000, {
     cors: {
-        origin: [
-            'https://chat-app-next-renzoromeo.vercel.app:*',
-            'https://chat-app-next-snowy.vercel.app:*',
-        ],
-        credentials: true,
+        origin: '*',
         methods: ['GET', 'POST']
     }
 });
