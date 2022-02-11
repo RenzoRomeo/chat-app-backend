@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc --downLevelIteration app.ts & node app.js",
+    "compile": "tsc --downLevelIteration app.ts",
     "dev": "nodemon -e ts  --exec \"npm run compile\"",
     "start": "node app.js"
   },

@@ -1,8 +1,12 @@
 import { Server, Socket } from 'socket.io';
 
-const server = new Server( parseInt(process.env.PORT as string) || 8000, {
+const server = new Server(parseInt(process.env.PORT as string) || 8000, {
   cors: {
-    origin: 'https://chat-app-next-renzoromeo.vercel.app/',
+    origin: [
+      'https://chat-app-next-renzoromeo.vercel.app:*',
+      'chat-app-next-snowy.vercel.app:*',
+    ],
+    allowedHeaders: '*',
     methods: ['GET', 'POST'],
   },
 });
